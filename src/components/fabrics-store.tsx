@@ -7,7 +7,7 @@ type Product = {id:string|number;name:string;category:string;description:string;
 type CartLine = Product & {quantity:number};
 type Panel = 'cart'|'account'|'product'|'orders'|'admin'|null;
 const logo='/images/bukhari-logo.png';
-const ADMIN_EMAIL='bukharifabricstailoting@gmail.com';
+const ADMIN_EMAIL='bukharifabricstailoring@gmail.com';
 const collections=[
   {id:'lawn',name:'Lawn Collection',description:'Timeless lawn and premium kurtas, made for exceptional comfort and everyday style.',image:'/images/kurta.png',eyebrow:'LIGHT · BREATHABLE · EVERYDAY'},
   {id:'ivory',name:'Ivory Heritage Collection',description:'Traditional fabrics for timeless elegance, comfort, and effortless style.',image:'/images/premium-fabric-1.jpg',eyebrow:'TIMELESS TRADITION'},
