@@ -76,8 +76,8 @@ drop policy if exists "Public can view active fabrics" on public.products;
 create policy "Public can view active fabrics" on public.products for select using(is_active=true);
 drop policy if exists "Bukhari admin manages products" on public.products;
 create policy "Bukhari admin manages products" on public.products for all to authenticated
-  using(lower(auth.jwt()->>'email')='bukharifabricstailoring@gmail.com')
-  with check(lower(auth.jwt()->>'email')='bukharifabricstailoring@gmail.com');
+  using(lower(auth.jwt()->>'email')='bukharifabricstailoting@gmail.com')
+  with check(lower(auth.jwt()->>'email')='bukharifabricstailoting@gmail.com');
 drop policy if exists "Customers read own orders" on public.orders;
 create policy "Customers read own orders" on public.orders for select to authenticated using(auth.uid()=user_id);
 drop policy if exists "Customers read own order items" on public.order_items;
@@ -96,11 +96,11 @@ on conflict(id) do update set public=true,file_size_limit=8388608,allowed_mime_t
 drop policy if exists "Public can view product images" on storage.objects;
 create policy "Public can view product images" on storage.objects for select using(bucket_id='product-images');
 drop policy if exists "Bukhari admin uploads product images" on storage.objects;
-create policy "Bukhari admin uploads product images" on storage.objects for insert to authenticated with check(bucket_id='product-images' and lower(auth.jwt()->>'email')='bukharifabricstailoring@gmail.com');
+create policy "Bukhari admin uploads product images" on storage.objects for insert to authenticated with check(bucket_id='product-images' and lower(auth.jwt()->>'email')='bukharifabricstailoting@gmail.com');
 drop policy if exists "Bukhari admin updates product images" on storage.objects;
-create policy "Bukhari admin updates product images" on storage.objects for update to authenticated using(bucket_id='product-images' and lower(auth.jwt()->>'email')='bukharifabricstailoring@gmail.com') with check(bucket_id='product-images' and lower(auth.jwt()->>'email')='bukharifabricstailoring@gmail.com');
+create policy "Bukhari admin updates product images" on storage.objects for update to authenticated using(bucket_id='product-images' and lower(auth.jwt()->>'email')='bukharifabricstailoting@gmail.com') with check(bucket_id='product-images' and lower(auth.jwt()->>'email')='bukharifabricstailoting@gmail.com');
 drop policy if exists "Bukhari admin deletes product images" on storage.objects;
-create policy "Bukhari admin deletes product images" on storage.objects for delete to authenticated using(bucket_id='product-images' and lower(auth.jwt()->>'email')='bukharifabricstailoring@gmail.com');
+create policy "Bukhari admin deletes product images" on storage.objects for delete to authenticated using(bucket_id='product-images' and lower(auth.jwt()->>'email')='bukharifabricstailoting@gmail.com');
 
 -- Verify current prices and discounts, validate stock, and save the order atomically.
 create or replace function public.place_order(p_customer_name text,p_phone text,p_address text,p_city text,p_postal_code text,p_items jsonb)

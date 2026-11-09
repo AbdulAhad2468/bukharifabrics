@@ -29,3 +29,49 @@
   .main-nav a:last-child{border-bottom:0}
 }
 @media(max-width:370px){.brand{gap:7px;font-size:12px}.topbar{padding-inline:12px}.account-button,.bag-icon{width:34px;height:34px}}
+.admin-launch{height:36px;display:inline-flex;align-items:center;gap:7px;padding:0 12px;border:1px solid #c6a77a;border-radius:20px;background:#c6a77a;color:#111;font-size:10px;font-weight:600;cursor:pointer}
+.admin-launch:hover{background:#d8bd96}
+.admin-account-button{display:flex;align-items:center;justify-content:center;gap:8px;margin:16px 0 10px}
+.side-panel.admin-panel-shell{width:min(900px,100vw);padding:28px clamp(18px,3vw,34px)}
+.admin-panel{min-height:0;overflow:auto;padding:4px 2px 30px}
+.admin-toolbar,.admin-list-heading,.admin-form-heading{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.admin-toolbar{padding:12px 0 18px;border-bottom:1px solid var(--line)}
+.admin-toolbar p{max-width:480px;margin:0;color:#777;font-size:11px;line-height:1.7}
+.admin-toolbar .button{display:flex;align-items:center;gap:8px;white-space:nowrap;padding:12px 15px}
+.admin-form{display:grid;gap:16px;padding:18px 0 22px;border-bottom:1px solid var(--line)}
+.admin-form-heading h3,.admin-list-heading h3{margin:0;font:500 22px var(--serif)}
+.admin-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.admin-form-grid label{display:grid;gap:6px;color:#555;font-size:10px}
+.admin-form-grid input,.admin-form-grid select,.admin-form-grid textarea,.admin-images>input[type=file]{width:100%;min-width:0;padding:10px 11px;border:1px solid #e1ded8;background:#fff;color:#222;font-size:11px}
+.admin-form-grid textarea{resize:vertical}
+.admin-wide{grid-column:1/-1}
+.admin-checks{display:flex;flex-wrap:wrap;gap:10px 18px}
+.admin-checks label{display:flex;align-items:center;gap:7px;color:#555;font-size:10px}
+.admin-checks input{accent-color:#927552}
+.admin-images{display:grid;gap:10px}
+.admin-images>strong{display:grid;gap:4px;font-size:11px}
+.admin-images>strong small,.admin-images>small{color:#888;font-size:9px;font-weight:400}
+.admin-gallery{display:flex;flex-wrap:wrap;gap:9px}
+.admin-thumb{position:relative;width:66px;height:76px;background:#f3f2ef}
+.admin-thumb img{width:100%;height:100%;object-fit:cover}
+.admin-thumb button{position:absolute;right:3px;top:3px;width:21px;height:21px;display:grid;place-items:center;border:0;border-radius:50%;background:#111c;color:white;cursor:pointer}
+.admin-form>.button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:43px}
+.admin-list{padding-top:18px}
+.admin-list-heading{margin-bottom:8px}
+.admin-product-row{display:grid;grid-template-columns:54px minmax(0,1fr) auto;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #efeeeb}
+.admin-product-row>img{width:54px;height:62px;object-fit:cover;background:#f3f2ef}
+.admin-product-copy{display:grid;gap:4px;min-width:0}
+.admin-product-copy strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:500 14px var(--serif)}
+.admin-product-copy span,.admin-product-copy small{color:#777;font-size:9px;line-height:1.5}
+.admin-edit-button{padding:9px 13px;font-size:10px}
+.admin-empty{color:#777;font-size:11px}
+.product-bottom del,.detail-price del,.cart-line del{margin-left:6px;color:#999;font-size:.85em;font-weight:400}
+.policy-page{width:min(820px,100%);min-height:100vh;margin:0 auto;padding:clamp(28px,7vw,78px) clamp(20px,5vw,48px);font-family:var(--sans);color:#222;line-height:1.8}
+.policy-page .policy-back{display:inline-block;margin-bottom:44px;color:#725b40;font-size:12px}
+.policy-page .overline{margin-bottom:12px}
+.policy-page h1{margin:0 0 5px;font:500 clamp(42px,7vw,65px)/1.1 var(--serif);letter-spacing:-.03em}
+.policy-page h2{margin:32px 0 8px;font:500 25px/1.25 var(--serif)}
+.policy-page p{color:#555;font-size:14px}
+.policy-page .policy-updated{margin-top:0;color:#888;font-size:11px}
+.policy-page a:not(.policy-back){color:#725b40;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:560px){.side-panel.admin-panel-shell{padding:21px 16px}.admin-toolbar{align-items:flex-start;flex-direction:column}.admin-toolbar .button{width:100%;justify-content:center}.admin-form-grid{grid-template-columns:1fr}.admin-wide{grid-column:auto}.admin-checks{display:grid;gap:11px}.admin-product-row{grid-template-columns:45px minmax(0,1fr) auto;gap:8px}.admin-product-row>img{width:45px;height:54px}.admin-edit-button{padding:8px 10px}.policy-page{line-height:1.75}.policy-page p{font-size:13px}}
