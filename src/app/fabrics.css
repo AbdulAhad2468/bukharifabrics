@@ -280,3 +280,16 @@
 .carousel-controls button:disabled{opacity:.35;cursor:not-allowed}
 @media(max-width:700px){.product-quick-view{opacity:1;transform:none;left:8px;bottom:8px;padding:7px 9px}.photo-count{right:8px;bottom:8px}.product-photo .product-badge{max-width:calc(100% - 58px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){.product-quick-view{transition:none;opacity:1;transform:none}}
+
+.hero:has(.fabric-finder) { display: flex; flex-direction: column; justify-content: center; gap: clamp(18px, 5vh, 48px); height: auto; min-height: max(520px, calc(100svh - 110px)); padding-block: 56px; }
+.fabric-finder { position: relative; z-index: 2; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; max-width: 100%; padding-inline: 16px; }
+.fabric-finder button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 5px 13px 5px 6px; border: 1px solid #ffffff60; border-radius: 30px; background: #201913db; color: white; cursor: pointer; font-size: 13px; transition: background .2s; }
+.fabric-finder button:hover, .fabric-finder button:focus-visible { background: #654c37; outline-color: white; }
+.fabric-finder img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+.admin-sale-preview { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 16px; padding: 16px 20px; border-radius: 12px; background: #eaf3ec; color: #244332; }
+.admin-sale-preview strong { font-size: 1.2rem; }
+.admin-sale-preview del { font-size: .85rem; font-weight: normal; margin-right: 9px; }
+@media (max-width: 700px) {
+  .fabric-finder { max-width: 420px; align-self: center; }
+  .hero:has(.fabric-finder) .scroll-cue { display: none; }
+}
