@@ -337,3 +337,15 @@
 @media(max-width:540px) {
   .admin-quick-actions { grid-template-columns:1fr; }
 }
+
+.admin-price-action { min-height:44px; border:1px solid #c8bbab; border-radius:8px; background:#faf8f4; color:#473925; font:600 13px var(--sans); padding:8px 14px; cursor:pointer; }
+.admin-price-action:hover, .admin-price-action:focus-visible { background:#eee6d9; }
+.admin-cover-label { position:absolute; z-index:1; bottom:4px; left:4px; background:#30281f; color:white; padding:2px 6px; border-radius:4px; font-size:11px; pointer-events:none; }
+.admin-image-thumb button { min-width:32px; min-height:32px; }
+.admin-upload-box:focus-within { outline:2px solid #735d41; outline-offset:3px; }
+.admin-section-heading h2 { overflow-wrap:anywhere; }
+@media(max-width:700px) {
+ .admin-inventory-actions { grid-column:1/-1; display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+ .admin-inventory-actions button { min-height:44px; }
+ .admin-image-thumb button { min-width:44px; min-height:44px; }
+}

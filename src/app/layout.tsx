@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   applicationName: 'Bukhari Fabrics',
   appleWebApp: { capable: true, title: 'Bukhari Fabrics', statusBarStyle: 'default' },
   formatDetection: { telephone: false },
-  icons: { icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/icon.png', type: 'image/png', sizes: '512x512' }], apple: '/apple-icon.png' },
+  icons: { icon: [{ url: '/favicon.ico?v=2', sizes: 'any' }, { url: '/icon.png?v=2', type: 'image/png', sizes: '512x512' }], apple: '/apple-icon.png?v=2' },
   openGraph: { title: 'Bukhari Fabrics', description: 'Premium fabrics for every occasion.', type: 'website', images: ['/images/bukhari-logo.png'] },
   twitter: { card: 'summary_large_image', title: 'Bukhari Fabrics', description: 'Premium fabrics for every occasion.', images: ['/images/bukhari-logo.png'] },
 };
